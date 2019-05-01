@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root fx:id="rootLogin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="350.0" type="BorderPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox fx:id="erroresVbox" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Label fx:id="errorMailDistintoLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textAlignment="CENTER" textFill="RED" />
+            <Label fx:id="errorContrasenas" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textAlignment="CENTER" textFill="RED" />
+            <Label fx:id="errorLongitud" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textAlignment="CENTER" textFill="RED" />
+            <Label fx:id="camposVacios" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textAlignment="CENTER" textFill="RED" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane fx:id="scrollPaneRoot" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <content>
+            <VBox fx:id="textFieldsVbox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+               <children>
+                  <TextField fx:id="userTextField" maxWidth="1.7976931348623157E308" promptText="Usuario" VBox.vgrow="ALWAYS" />
+                  <TextField fx:id="passwordTextField" maxWidth="1.7976931348623157E308" promptText="Contraseña" VBox.vgrow="ALWAYS" />
+                  <TextField fx:id="passwordCheck" maxWidth="1.7976931348623157E308" promptText="Contraseña" VBox.vgrow="ALWAYS" />
+                  <TextField fx:id="emailTextField" maxWidth="1.7976931348623157E308" promptText="Email" VBox.vgrow="ALWAYS" />
+                  <TextField fx:id="emailCheck" maxWidth="1.7976931348623157E308" promptText="Email" VBox.vgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <VBox fx:id="seguridadVbox" alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="preguntasComboBox" prefWidth="150.0" />
+            <TextField fx:id="respuestaTextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Respuesta">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+</fx:root>
